@@ -1,0 +1,23 @@
+body {
+    transition: background-color 0.5s ease; /* Adiciona uma transição suave */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    min-height: 100vh;        /* Garante que o body ocupa a altura total da viewport */
+    margin: 0;               /* Remove as margens padrão do body */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    border: none;       /* Remove a borda padrão do botão */
+    background-color: #4CAF50; /* Cor de fundo inicial do botão */
+    color: white;             /* Cor do texto do botão */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Adiciona uma sombra ao botão */
+}
+button:hover{
+    background-color: #45a049;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explode this balloon</title>
+    <style>
+        #balao {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            cursor: pointer; /* Muda o cursor para indicar que é clicável */
+            transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;  /* Transições suaves */
+            display: flex; /* Centraliza o texto */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+        }
+    </style>
+</head>
+<body>
+    <div id="balao"></div>
+
+    <script>
+        const balao = document.getElementById('balao'); // Obtem o elemento balão
+        let tamanho = 200; // armazena o tamanho do balão
+        let corAtual = 0; // armazena a cor autal no array cores
+        const cores = ['red', 'green', 'blue']; // array com as cores usadas
+
+        balao.addEventListener('click', () => { // evento clicar para aumentar o tamanho em 10px
+            tamanho += 10;
+            if (tamanho > 420) { // evento de chegar ao tamanho maximo, reduzir
+                tamanho = 200;
+            }
+            balao.style.width = tamanho + 'px'; // registrar e adicionar o tamanho na largura
+            balao.style.height = tamanho + 'px'; // msma coisa so que altura
+
+            corAtual = (corAtual + 1) % cores.length; // evento para mudar car de acordo com o clique
+            balao.style.backgroundColor = cores[corAtual];
+        });
+
+        balao.addEventListener('mouseout', () => { // evento para reduzir o tamanho do balão em 5px
+            tamanho -= 5;
+            if (tamanho < 200) {  //impedir que fique menor que 200
+                tamanho = 200;
+            }
+            balao.style.width = tamanho + 'px'; // registrar e reduzir tamanho do balão
+            balao.style.height = tamanho + 'px';
+
+            corAtual = (corAtual - 1 + cores.length) % cores.length; // Garante índice positivo
+            balao.style.backgroundColor = cores[corAtual];
+        });
+    </script>
+</body>
+</html>

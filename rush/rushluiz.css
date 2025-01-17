@@ -1,0 +1,80 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+    font-family: sans-serif;
+}
+
+section {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#introducao {
+    background-color: rgba(248, 249, 250, 0.8);
+}
+
+#experiencia {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#contato {
+    background-color: rgba(233, 236, 239, 0.8);
+}
+
+.img-fluid {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+
+}
+
+h1,
+h2 {
+    color: #333;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1030;
+}
+.navbar-brand{
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #333;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.social-icon {
+    width: 50px; 
+    height: 50px; 
+    margin: 10px; 
+    transition: transform 0.2s; 
+    border-radius: 50%;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}

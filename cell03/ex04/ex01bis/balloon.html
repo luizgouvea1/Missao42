@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explode this balloon</title>
+    <style>
+        #balao {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="balao"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const $balao = $("#balao"); // Seleciona o balão com jQuery (com cache)
+            let tamanho = 200;
+            let corAtual = 0;
+            const cores = ['red', 'green', 'blue'];
+
+            $balao.click(function() {
+                tamanho += 10;
+                if (tamanho > 420) {
+                    tamanho = 200;
+                }
+                $(this).css({ // Usando .css() com um objeto para múltiplos estilos
+                    width: tamanho + 'px',
+                    height: tamanho + 'px'
+                });
+
+                corAtual = (corAtual + 1) % cores.length;
+                $(this).css("background-color", cores[corAtual]);
+            });
+
+            $balao.mouseout(function() {
+                tamanho -= 5;
+                if (tamanho < 200) {
+                    tamanho = 200;
+                }
+                $(this).css({
+                    width: tamanho + 'px',
+                    height: tamanho + 'px'
+                });
+
+                corAtual = (corAtual - 1 + cores.length) % cores.length;
+                $(this).css("background-color", cores[corAtual]);
+            });
+        });
+    </script>
+</body>
+</html>

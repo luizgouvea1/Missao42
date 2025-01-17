@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+section {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-attachment: fixed; /* ESSA É A LINHA MÁGICA */
+    text-align: center;
+}
+
+#primeira-secao {
+    background-image: url("318730.jpg");
+}
+
+#bloco-preto {
+    background-color:black;
+    color: white;
+    padding: 50px;
+    height: 30vh;
+}
+
+#segunda-secao {
+    background-image: url("depoisda42.jpg");
+}

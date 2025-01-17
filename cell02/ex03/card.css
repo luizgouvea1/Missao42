@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    min-height: 100vh;      /* Garante que o body ocupa a altura total da tela */
+    margin: 0;
+    background-color: #f0f0f0; /* Cor de fundo suave */
+}
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center; /* Alinha o texto dentro do card */
+}
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    object-fit: cover; /* Mantém a proporção da imagem e preenche o círculo */
+    margin-bottom: 10px;
+}
+.social-icons {
+    margin-top: 15px;
+}
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px; /* Espaçamento entre os ícones */
+}
+.contact-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+/* Estilos para a tabela invisível (usada para alinhamento mais preciso, se necessário) */
+table {
+  width: 100%; /* Largura total da tabela */
+  border-collapse: collapse; /* Remove espaçamento entre as células */
+}
+
+td {
+  padding: 5px; /* Espaçamento interno das células */
+  text-align: center; /* Alinhamento do texto nas células */
+}

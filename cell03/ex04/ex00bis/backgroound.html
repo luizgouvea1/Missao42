@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudar Cor de Fundo</title>
+    <link rel="stylesheet" href="backgroound.css">
+</head>
+<body>
+
+    <button id="mudarCor">Mudar Cor de Fundo</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+          $("#mudarCor").click(function() {
+            const cores = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF", "#800080", "#FFA500", "#008000", "#A0522D","#800000","#000080","#808000"];
+            const corAleatoria = cores[Math.floor(Math.random() * cores.length)];
+            $("body").css("background-color", corAleatoria);
+          });
+        });
+    </script>
+
+</body>
+</html>

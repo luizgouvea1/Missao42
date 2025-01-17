@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudar Cor de Fundo</title>
+    <link rel="stylesheet" href="backgroound.css">
+</head>
+<body>
+
+    <button onclick="mudarCorDeFundo()">Mudar Cor de Fundo</button>
+
+    <script>
+        function mudarCorDeFundo() {
+            const cores = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF", "#800080", "#FFA500", "#008000", "#A0522D","#800000","#000080","#808000"]; // Array de cores
+            const corAleatoria = cores[Math.floor(Math.random() * cores.length)];
+            document.body.style.backgroundColor = corAleatoria;
+        }
+    </script>
+
+</body>
+</html>

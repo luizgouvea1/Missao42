@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora</title>
+    <style>
+        body { font-family: sans-serif; }
+        input, select, button { padding: 5px; margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Calculadora Básica</h1>
+    <input type="text" id="valor1" placeholder="Valor 1">
+    <select id="operador">
+        <option value="">Selecione a função</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="text" id="valor2" placeholder="Valor 2">
+    <button onclick="calcular()">Try me!</button>
+
+    <script>
+        function calcular() {
+            const valor1Str = document.getElementById("valor1").value.trim();
+            const valor2Str = document.getElementById("valor2").value.trim();
+            const operador = document.getElementById("operador").value;
+
+            if (!/^\d+$/.test(valor1Str) || !/^\d+$/.test(valor2Str)) {
+                alert("Error :(");
+                return;
+            }
+
+            if (operador === "") {
+                alert("Error: Selecione um operador.");
+                return;
+            }
+
+            const valor1 = parseInt(valor1Str);
+            const valor2 = parseInt(valor2Str);
+
+            let resultado;
+
+            switch (operador) {
+                case "+": resultado = valor1 + valor2; break;
+                case "-": resultado = valor1 - valor2; break;
+                case "*": resultado = valor1 * valor2; break;
+                case "/":
+                    if (valor2 === 0) {
+                        alert("It’s over 9000!");
+                        console.error("Divisão por zero!");
+                        return;
+                    }
+                    resultado = valor1 / valor2;
+                    break;
+                case "%":
+                    if (valor2 === 0) {
+                        alert("It’s over 9000!");
+                        console.error("Módulo por zero!");
+                        return;
+                    }
+                    resultado = valor1 % valor2;
+                    break;
+                default:
+                    alert("Operador inválido!");
+                    return;
+            }
+
+            alert("Resultado: " + resultado);
+            console.log("Resultado: " + resultado);
+        }
+
+        setInterval(() => {
+            alert("Please, use me...");
+        }, 30000);
+    </script>
+</body>
+</html>
